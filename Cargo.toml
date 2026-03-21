@@ -1,0 +1,24 @@
+[package]
+name = "mql5-lsp"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Language Server Protocol implementation for MQL5"
+
+[[bin]]
+name = "mql5-lsp"
+path = "src/main.rs"
+
+[dependencies]
+tower-lsp = "0.20"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tree-sitter = "0.25"
+log = "0.4"
+env_logger = "0.11"
+dashmap = "6"
+ropey = "1"
+
+[build-dependencies]
+cc = "1"
